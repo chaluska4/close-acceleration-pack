@@ -1,0 +1,53 @@
+# Generated data / pipeline output — regenerate with `make all`.
+# (deliverables/*.xlsx and docs/images/*.png are curated copies, tracked on purpose.)
+data/close_pack.db
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+output/
+
+# Obsolete/versioned workbook iterations (V1, v2_draft.xlsx, etc.) — only
+# the files in deliverables/ are the tracked, final copies.
+*_v[0-9]*.xlsx
+*_V[0-9]*.xlsx
+*.draft.xlsx
+
+# Secrets / credentials — never commit, even for a synthetic-data project.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*token*.json
+.aws/
+.netrc
+
+# Browser automation sessions / local auth state
+.claude-chrome-profile/
+**/chrome-profile/
+**/*session*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Scratch / temporary render output
+*.tmp
+tmp/
+scratch/
+*.pdf
