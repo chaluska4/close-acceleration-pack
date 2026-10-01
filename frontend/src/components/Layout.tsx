@@ -33,7 +33,7 @@ export function Layout() {
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div>
               <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-accent)]">
-                FP&amp;A Reporting Workflow
+                Automated FP&amp;A Month-End Close Workflow
               </p>
               <h1 className="text-2xl font-bold text-[var(--color-navy)]">{meta.product_name}</h1>
               <p className="mt-1 text-sm text-[var(--color-ink-secondary)]">
