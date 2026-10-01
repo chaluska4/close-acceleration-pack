@@ -1,4 +1,4 @@
-.PHONY: all data pipeline screenshots deliverables dashboard-screenshots test clean
+.PHONY: all data pipeline screenshots deliverables dashboard-screenshots frontend-data test clean
 
 all: data pipeline
 
@@ -17,6 +17,9 @@ deliverables: pipeline
 
 dashboard-screenshots: deliverables
 	python docs/generate_dashboard_screenshots.py
+
+frontend-data: deliverables
+	python scripts/export_frontend_data.py
 
 test:
 	python -m unittest discover -s tests -v

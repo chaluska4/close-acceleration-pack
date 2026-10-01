@@ -117,6 +117,36 @@ company's financials.
 **Close Calendar**
 ![Close Calendar — Day 1-5 tasks with dependency-cascade status](docs/images/close-calendar.png)
 
+## Web App (Frontend)
+
+A standalone, deployable web UI for this project lives in [`frontend/`](frontend/) —
+a React + TypeScript + Tailwind single-page app with four views (Executive
+Overview, Variance Analysis, Close Checklist & Controls, Outputs) built for
+a finance audience, not a code audience. It reads the same computed numbers
+as the Excel workbooks — never re-derived, never mocked — through a small
+JSON export layer (`scripts/export_frontend_data.py`) that calls the
+existing `variance`/`kpi`/`controls` modules and serializes their output;
+no financial logic lives in the frontend.
+
+**Run it:**
+
+```bash
+# from the repo root, after `make all` has seeded the database
+make frontend-data   # copies output/*.xlsx -> deliverables/, then writes
+                      # frontend/src/data/*.json + frontend/public/ assets
+
+cd frontend
+npm install
+npm run dev           # http://localhost:5173
+```
+
+`npm run build` produces a static `frontend/dist/` deployable to any static
+host (Vercel, Netlify, GitHub Pages, S3) with zero server configuration —
+routing is hash-based (`/#/variance`) specifically so a direct link works
+without a rewrite rule. Re-run `make frontend-data` any time the
+underlying data or deliverables change; the frontend has no independent
+data source to go stale against.
+
 ## Design decisions
 
 **Why SQLite.** A single-file, auditable ledger with no server to stand

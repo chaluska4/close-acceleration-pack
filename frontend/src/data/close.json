@@ -1,0 +1,337 @@
+{
+  "period_label": "December 2025",
+  "summary": {
+    "tasks_complete": 2,
+    "tasks_total": 10,
+    "tasks_open": 8,
+    "exception_tasks": 1,
+    "blocked_tasks": 4,
+    "current_close_day": 4
+  },
+  "calendar": [
+    {
+      "task_id": "T1",
+      "day": 1,
+      "task": "Cut off subledgers (AP/AR/Inventory) and lock the period",
+      "owner": "AP/AR Clerk",
+      "reviewer": "Staff Accountant",
+      "dependency": "None \u2014 first task of the close",
+      "depends_on": [],
+      "evidence_ref": "Subledger cutoff report \u2014 SUBLEDGER-2025-12",
+      "status": "Complete",
+      "exception_notes": "",
+      "approved_workaround": ""
+    },
+    {
+      "task_id": "T2",
+      "day": 1,
+      "task": "Reconcile all bank accounts to the GL",
+      "owner": "Staff Accountant",
+      "reviewer": "Controller",
+      "dependency": "Subledger cutoff",
+      "depends_on": [
+        "T1"
+      ],
+      "evidence_ref": "Bank reconciliation workpaper \u2014 BANKREC-2025-12",
+      "status": "Exception",
+      "exception_notes": "Unreconciled variance of $1,240 pending research; escalated to Controller for resolution by Day 2.",
+      "approved_workaround": ""
+    },
+    {
+      "task_id": "T3",
+      "day": 2,
+      "task": "Post accruals and reclassifying journal entries",
+      "owner": "Senior Accountant",
+      "reviewer": "Controller",
+      "dependency": "Bank reconciliations",
+      "depends_on": [
+        "T2"
+      ],
+      "evidence_ref": "JE batch \u2014 ACCR-2025-12",
+      "status": "Blocked",
+      "exception_notes": "Blocked: dependent on unresolved prerequisite \"Reconcile all bank accounts to the GL\" (T2, currently Exception); cannot proceed or confirm completion until that is resolved.",
+      "approved_workaround": ""
+    },
+    {
+      "task_id": "T4",
+      "day": 2,
+      "task": "Calculate and post the payroll accrual",
+      "owner": "Payroll/HR",
+      "reviewer": "Controller",
+      "dependency": "None \u2014 runs in parallel with accruals",
+      "depends_on": [],
+      "evidence_ref": "Payroll accrual calculation \u2014 PR-2025-12",
+      "status": "Complete",
+      "exception_notes": "",
+      "approved_workaround": ""
+    },
+    {
+      "task_id": "T5",
+      "day": 3,
+      "task": "Run the trial balance and review for out-of-pattern balances",
+      "owner": "Controller",
+      "reviewer": "FP&A Manager",
+      "dependency": "Accruals and payroll posted",
+      "depends_on": [
+        "T3",
+        "T4"
+      ],
+      "evidence_ref": "Trial balance export \u2014 TB-2025-12",
+      "status": "Blocked",
+      "exception_notes": "Blocked: dependent on unresolved prerequisite \"Post accruals and reclassifying journal entries\" (T3, currently Blocked); cannot proceed or confirm completion until that is resolved.",
+      "approved_workaround": ""
+    },
+    {
+      "task_id": "T6",
+      "day": 3,
+      "task": "Prepare balance sheet account reconciliations",
+      "owner": "Staff Accountant",
+      "reviewer": "Controller",
+      "dependency": "Trial balance run",
+      "depends_on": [
+        "T5"
+      ],
+      "evidence_ref": "Balance sheet reconciliation binder \u2014 BSREC-2025-12",
+      "status": "Blocked",
+      "exception_notes": "Blocked: dependent on unresolved prerequisite \"Run the trial balance and review for out-of-pattern balances\" (T5, currently Blocked); cannot proceed or confirm completion until that is resolved.",
+      "approved_workaround": ""
+    },
+    {
+      "task_id": "T7",
+      "day": 4,
+      "task": "Run variance analysis: actual vs. budget vs. forecast",
+      "owner": "FP&A Analyst",
+      "reviewer": "FP&A Manager",
+      "dependency": "Trial balance finalized",
+      "depends_on": [
+        "T5"
+      ],
+      "evidence_ref": "Variance Analysis Workbook \u2014 variance_analysis.xlsx",
+      "status": "Blocked",
+      "exception_notes": "Blocked: dependent on unresolved prerequisite \"Run the trial balance and review for out-of-pattern balances\" (T5, currently Blocked); cannot proceed or confirm completion until that is resolved.",
+      "approved_workaround": ""
+    },
+    {
+      "task_id": "T8",
+      "day": 4,
+      "task": "Execute controls testing and collect evidence for the controls log",
+      "owner": "Internal Controls",
+      "reviewer": "Controller",
+      "dependency": "Subledgers and GL closed",
+      "depends_on": [
+        "T1",
+        "T5"
+      ],
+      "evidence_ref": "Controls Log \u2014 close_checklist.xlsx (Controls Log tab)",
+      "status": "Not Started",
+      "exception_notes": "",
+      "approved_workaround": ""
+    },
+    {
+      "task_id": "T9",
+      "day": 5,
+      "task": "Finalize financial statements and management reporting package",
+      "owner": "Controller",
+      "reviewer": "FP&A Manager",
+      "dependency": "Variance analysis and controls testing complete",
+      "depends_on": [
+        "T7",
+        "T8"
+      ],
+      "evidence_ref": "Management Reporting Package \u2014 MRP-2025-12",
+      "status": "Not Started",
+      "exception_notes": "",
+      "approved_workaround": ""
+    },
+    {
+      "task_id": "T10",
+      "day": 5,
+      "task": "Distribute close package to leadership",
+      "owner": "FP&A Manager",
+      "reviewer": "Controller",
+      "dependency": "Financials finalized",
+      "depends_on": [
+        "T9"
+      ],
+      "evidence_ref": "Distribution confirmation \u2014 close package email log",
+      "status": "Not Started",
+      "exception_notes": "",
+      "approved_workaround": ""
+    }
+  ],
+  "controls_summary": {
+    "controls_total": 12,
+    "controls_effective": 11,
+    "controls_exception": 1
+  },
+  "controls": [
+    {
+      "control_id": "COMP-01",
+      "category": "Completeness",
+      "process_area": "Financial Close - P&L Reporting",
+      "risk": "Incomplete P&L data could cause reported results to misstate actual financial performance.",
+      "control_activity": "All P&L line items are present for all 12 months in actuals",
+      "owner": "Staff Accountant",
+      "reviewer": "Controller",
+      "frequency": "Monthly",
+      "evidence_ref": "GL export row count \u2014 close_pack.db/actuals",
+      "status": "Effective",
+      "detail": "84 of 84 expected (month x line_item) cells present.",
+      "exception_remediation": "None required \u2014 control operating as designed."
+    },
+    {
+      "control_id": "COMP-02",
+      "category": "Completeness",
+      "process_area": "Budgeting",
+      "risk": "An incomplete budget load would produce false or missing variance results for any affected line.",
+      "control_activity": "All P&L line items are present for all 12 months in budgets",
+      "owner": "FP&A Analyst",
+      "reviewer": "FP&A Manager",
+      "frequency": "Annual (set once, checked monthly)",
+      "evidence_ref": "Budget load file \u2014 close_pack.db/budgets",
+      "status": "Effective",
+      "detail": "84 of 84 expected budget values populated.",
+      "exception_remediation": "None required \u2014 control operating as designed."
+    },
+    {
+      "control_id": "COMP-03",
+      "category": "Completeness",
+      "process_area": "Forecasting",
+      "risk": "An incomplete forecast load would misstate forecast-accuracy reporting.",
+      "control_activity": "All P&L line items are present for all 12 months in forecasts",
+      "owner": "FP&A Analyst",
+      "reviewer": "FP&A Manager",
+      "frequency": "Quarterly",
+      "evidence_ref": "Forecast revision file \u2014 close_pack.db/forecasts",
+      "status": "Effective",
+      "detail": "84 of 84 expected forecast values populated.",
+      "exception_remediation": "None required \u2014 control operating as designed."
+    },
+    {
+      "control_id": "COMP-04",
+      "category": "Completeness",
+      "process_area": "Operations Reporting",
+      "risk": "A missing units-sold record would break per-unit KPI reporting for that month.",
+      "control_activity": "A units-sold record exists for every closed month",
+      "owner": "Operations Analyst",
+      "reviewer": "FP&A Analyst",
+      "frequency": "Monthly",
+      "evidence_ref": "Shipment log \u2014 close_pack.db/units",
+      "status": "Effective",
+      "detail": "12 of 12 expected monthly units_sold records present.",
+      "exception_remediation": "None required \u2014 control operating as designed."
+    },
+    {
+      "control_id": "ACC-01",
+      "category": "Accuracy",
+      "process_area": "Variance Reporting",
+      "risk": "A broken waterfall reconciliation would let a mis-stated variance narrative reach management undetected.",
+      "control_activity": "Operating Income waterfall reconciles exactly to the total OI variance",
+      "owner": "FP&A Analyst",
+      "reviewer": "FP&A Manager",
+      "frequency": "Monthly",
+      "evidence_ref": "variance.py waterfall_reconciliation() output",
+      "status": "Effective",
+      "detail": "Waterfall reconciles to OI variance for all 12 months (difference = $0.00).",
+      "exception_remediation": "None required \u2014 control operating as designed."
+    },
+    {
+      "control_id": "ACC-02",
+      "category": "Accuracy",
+      "process_area": "Revenue Assurance",
+      "risk": "A mismatch between booked revenue and shipment volume could indicate a pricing or booking error.",
+      "control_activity": "Implied unit price (Revenue / units sold) falls within expected range",
+      "owner": "Controller",
+      "reviewer": "FP&A Manager",
+      "frequency": "Monthly",
+      "evidence_ref": "Revenue vs. shipment-log cross-check",
+      "status": "Effective",
+      "detail": "Implied unit price within $38-$47 for all 12 months.",
+      "exception_remediation": "None required \u2014 control operating as designed."
+    },
+    {
+      "control_id": "ACC-03",
+      "category": "Accuracy",
+      "process_area": "Cost of Goods Sold",
+      "risk": "An unexplained COGS ratio swing could indicate a supplier cost issue or margin erosion going unnoticed until year-end.",
+      "control_activity": "Exception if COGS as a % of Revenue exceeds Budget or the latest Forecast by more than 200 bps",
+      "owner": "Controller",
+      "reviewer": "FP&A Manager",
+      "frequency": "Monthly",
+      "evidence_ref": "COGS trend analysis workpaper (Actual/Budget/Forecast COGS-%-of-Revenue, bps variance). Result: 2025-12: Actual COGS was 57.91% of Revenue (Budget 55.50%, Forecast 63.09%). Actual COGS exceeded Budget by 241 bps (+241 bps), which triggered the exception (threshold: +200 bps). Actual was 518 bps below Forecast (-518 bps), which is favorable and not the trigger.",
+      "status": "Exception",
+      "detail": "2025-12: Actual COGS was 57.91% of Revenue (Budget 55.50%, Forecast 63.09%). Actual COGS exceeded Budget by 241 bps (+241 bps), which triggered the exception (threshold: +200 bps). Actual was 518 bps below Forecast (-518 bps), which is favorable and not the trigger.",
+      "exception_remediation": "Research root cause with Supply Chain/Procurement; document business justification for the period and evaluate whether standard cost assumptions need revision for the next forecast cycle."
+    },
+    {
+      "control_id": "ACC-04",
+      "category": "Accuracy",
+      "process_area": "Forecasting",
+      "risk": "A forecast copy-forwarded from budget rather than re-based on actuals would overstate forecast accuracy and mislead planning.",
+      "control_activity": "Forecast values are re-based (not copy-forwarded) after each quarterly revision",
+      "owner": "FP&A Manager",
+      "reviewer": "Controller",
+      "frequency": "Quarterly",
+      "evidence_ref": "Forecast vintage comparison \u2014 forecasts vs. budgets table",
+      "status": "Effective",
+      "detail": "All post-Q1 forecasts were re-based off actual run-rate (no stale budget copy-forward).",
+      "exception_remediation": "None required \u2014 control operating as designed."
+    },
+    {
+      "control_id": "AUTH-01",
+      "category": "Authorization",
+      "process_area": "Budget Governance",
+      "risk": "An unapproved budget could be used as the basis for variance reporting without management's agreement to the plan.",
+      "control_activity": "Annual budget is signed off by the Finance Director before fiscal-year start",
+      "owner": "Finance Director",
+      "reviewer": "CFO",
+      "frequency": "Annual",
+      "evidence_ref": "Approval record: CAP-2025-BUD-001 (FY25 budget package)",
+      "status": "Effective",
+      "detail": "Manual attestation \u2014 no automated data trail in this model.",
+      "exception_remediation": "None required \u2014 control operating as designed."
+    },
+    {
+      "control_id": "AUTH-02",
+      "category": "Authorization",
+      "process_area": "Journal Entry Authorization",
+      "risk": "An unreviewed large journal entry could post an error or an unauthorized adjustment to the GL.",
+      "control_activity": "Journal entries and reclasses over $25,000 require a second approver",
+      "owner": "Controller",
+      "reviewer": "CFO",
+      "frequency": "Per transaction",
+      "evidence_ref": "JE approval workflow log (second-approver field populated)",
+      "status": "Effective",
+      "detail": "Manual attestation \u2014 no automated data trail in this model.",
+      "exception_remediation": "None required \u2014 control operating as designed."
+    },
+    {
+      "control_id": "AUTH-03",
+      "category": "Authorization",
+      "process_area": "Forecast Governance",
+      "risk": "An unapproved forecast revision could reach leadership without FP&A management review.",
+      "control_activity": "Quarterly forecast revisions are approved by the FP&A Manager before publication",
+      "owner": "FP&A Manager",
+      "reviewer": "CFO",
+      "frequency": "Quarterly",
+      "evidence_ref": "Forecast sign-off record: CAP-2025-FCST-Q#",
+      "status": "Effective",
+      "detail": "Manual attestation \u2014 no automated data trail in this model.",
+      "exception_remediation": "None required \u2014 control operating as designed."
+    },
+    {
+      "control_id": "AUTH-04",
+      "category": "Authorization",
+      "process_area": "System Access / Segregation of Duties",
+      "risk": "Unrestricted access to the close-the-books function could allow an unauthorized user to alter a closed period.",
+      "control_activity": "Close-the-books system function is restricted to the Controller and Assistant Controller",
+      "owner": "IT Security",
+      "reviewer": "Controller",
+      "frequency": "Quarterly access review",
+      "evidence_ref": "System access review: close-lock role membership",
+      "status": "Effective",
+      "detail": "Manual attestation \u2014 no automated data trail in this model.",
+      "exception_remediation": "None required \u2014 control operating as designed."
+    }
+  ]
+}

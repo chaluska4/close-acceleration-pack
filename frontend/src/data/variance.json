@@ -1,0 +1,302 @@
+{
+  "month": "2025-12",
+  "month_label": "December 2025",
+  "threshold_pct": 0.05,
+  "threshold_abs": 10000.0,
+  "convention_note": "Variance $ = Actual - Comparison (Budget or Forecast). For Revenue, Gross Profit, and Operating Income, positive is favorable. For COGS and opex lines, positive means the actual exceeded plan (unfavorable, an overspend) \u2014 'Favorable Variance' columns flip that sign so a positive number always means 'helped Operating Income,' on every line, in every report in this workbook. Percent variance is shown as N/M (not meaningful) when the comparison base is zero or under $1,000, or when a profit metric (Gross Profit, Operating Income) flips sign against its comparison \u2014 a % change is not a meaningful description of crossing from profit to loss or back.",
+  "narrative": {
+    "headline": "Operating Income for December 2025 was $109K, $59K behind the $167K budget.",
+    "management_summary": "Operating Income was $59K unfavorable to budget but $15K favorable to the latest forecast. The budget variance was driven by $83K lower revenue and $4K higher Marketing spend, partially offset by $28K lower COGS."
+  },
+  "waterfall": {
+    "components": [
+      {
+        "line_item": "Revenue",
+        "contribution": -83268.42999999993,
+        "contribution_label": "-$83K"
+      },
+      {
+        "line_item": "COGS",
+        "contribution": 27549.119999999995,
+        "contribution_label": "$28K"
+      },
+      {
+        "line_item": "Salaries",
+        "contribution": -2611.520000000004,
+        "contribution_label": "-$3K"
+      },
+      {
+        "line_item": "Marketing",
+        "contribution": -4499.389999999999,
+        "contribution_label": "-$4K"
+      },
+      {
+        "line_item": "Facilities",
+        "contribution": 397.15999999999985,
+        "contribution_label": "$397"
+      },
+      {
+        "line_item": "Professional Services",
+        "contribution": 3435.66,
+        "contribution_label": "$3K"
+      },
+      {
+        "line_item": "Other",
+        "contribution": 476.1399999999994,
+        "contribution_label": "$476"
+      }
+    ],
+    "reconciliation": {
+      "sum_components": -58521.26,
+      "oi_variance": -58521.26,
+      "difference": 0.0
+    },
+    "budget_oi": 167380.43,
+    "actual_oi": 108859.17000000004
+  },
+  "comparisons": {
+    "budget": {
+      "label": "Budget",
+      "rows": [
+        {
+          "line_item": "Revenue",
+          "is_subtotal": false,
+          "actual": 775349.93,
+          "comparison": 858618.36,
+          "variance": -83268.42999999993,
+          "variance_pct": -0.09697955911401654,
+          "favorable": false,
+          "material": true
+        },
+        {
+          "line_item": "COGS",
+          "is_subtotal": false,
+          "actual": 448984.07,
+          "comparison": 476533.19,
+          "variance": -27549.119999999995,
+          "variance_pct": -0.05781154508881112,
+          "favorable": true,
+          "material": true
+        },
+        {
+          "line_item": "Gross Profit",
+          "is_subtotal": true,
+          "actual": 326365.86000000004,
+          "comparison": 382085.17,
+          "variance": -55719.30999999994,
+          "variance_pct": -0.14582955418028903,
+          "favorable": false,
+          "material": true
+        },
+        {
+          "line_item": "Salaries",
+          "is_subtotal": false,
+          "actual": 97911.52,
+          "comparison": 95300.0,
+          "variance": 2611.520000000004,
+          "variance_pct": 0.027403147953830052,
+          "favorable": false,
+          "material": false
+        },
+        {
+          "line_item": "Marketing",
+          "is_subtotal": false,
+          "actual": 70404.13,
+          "comparison": 65904.74,
+          "variance": 4499.389999999999,
+          "variance_pct": 0.06827111373172853,
+          "favorable": false,
+          "material": true
+        },
+        {
+          "line_item": "Facilities",
+          "is_subtotal": false,
+          "actual": 29102.84,
+          "comparison": 29500.0,
+          "variance": -397.15999999999985,
+          "variance_pct": -0.013463050847457622,
+          "favorable": true,
+          "material": false
+        },
+        {
+          "line_item": "Professional Services",
+          "is_subtotal": false,
+          "actual": 11564.34,
+          "comparison": 15000.0,
+          "variance": -3435.66,
+          "variance_pct": -0.229044,
+          "favorable": true,
+          "material": true
+        },
+        {
+          "line_item": "Other",
+          "is_subtotal": false,
+          "actual": 8523.86,
+          "comparison": 9000.0,
+          "variance": -476.1399999999994,
+          "variance_pct": -0.05290444444444438,
+          "favorable": true,
+          "material": true
+        },
+        {
+          "line_item": "Operating Income",
+          "is_subtotal": true,
+          "actual": 108859.17000000004,
+          "comparison": 167380.43,
+          "variance": -58521.25999999995,
+          "variance_pct": -0.3496302405245342,
+          "favorable": false,
+          "material": true
+        }
+      ],
+      "top_favorable": [
+        {
+          "line_item": "COGS",
+          "contribution": 27549.119999999995,
+          "contribution_label": "$28K"
+        },
+        {
+          "line_item": "Professional Services",
+          "contribution": 3435.66,
+          "contribution_label": "$3K"
+        },
+        {
+          "line_item": "Other",
+          "contribution": 476.1399999999994,
+          "contribution_label": "$476"
+        }
+      ],
+      "top_unfavorable": [
+        {
+          "line_item": "Revenue",
+          "contribution": -83268.42999999993,
+          "contribution_label": "-$83K"
+        },
+        {
+          "line_item": "Marketing",
+          "contribution": -4499.389999999999,
+          "contribution_label": "-$4K"
+        }
+      ]
+    },
+    "forecast": {
+      "label": "Forecast",
+      "rows": [
+        {
+          "line_item": "Revenue",
+          "is_subtotal": false,
+          "actual": 775349.93,
+          "comparison": 813467.37,
+          "variance": -38117.439999999944,
+          "variance_pct": -0.046857982760881906,
+          "favorable": false,
+          "material": true
+        },
+        {
+          "line_item": "COGS",
+          "is_subtotal": false,
+          "actual": 448984.07,
+          "comparison": 513213.88,
+          "variance": -64229.81,
+          "variance_pct": -0.12515212955658955,
+          "favorable": true,
+          "material": true
+        },
+        {
+          "line_item": "Gross Profit",
+          "is_subtotal": true,
+          "actual": 326365.86000000004,
+          "comparison": 300253.49,
+          "variance": 26112.370000000054,
+          "variance_pct": 0.08696774848478882,
+          "favorable": true,
+          "material": true
+        },
+        {
+          "line_item": "Salaries",
+          "is_subtotal": false,
+          "actual": 97911.52,
+          "comparison": 96504.2,
+          "variance": 1407.320000000007,
+          "variance_pct": 0.014582992242824737,
+          "favorable": false,
+          "material": false
+        },
+        {
+          "line_item": "Marketing",
+          "is_subtotal": false,
+          "actual": 70404.13,
+          "comparison": 58819.1,
+          "variance": 11585.030000000006,
+          "variance_pct": 0.19696034111368596,
+          "favorable": false,
+          "material": true
+        },
+        {
+          "line_item": "Facilities",
+          "is_subtotal": false,
+          "actual": 29102.84,
+          "comparison": 29575.84,
+          "variance": -473.0,
+          "variance_pct": -0.015992783298800644,
+          "favorable": true,
+          "material": false
+        },
+        {
+          "line_item": "Professional Services",
+          "is_subtotal": false,
+          "actual": 11564.34,
+          "comparison": 12750.0,
+          "variance": -1185.6599999999999,
+          "variance_pct": -0.09299294117647057,
+          "favorable": true,
+          "material": true
+        },
+        {
+          "line_item": "Other",
+          "is_subtotal": false,
+          "actual": 8523.86,
+          "comparison": 8726.66,
+          "variance": -202.79999999999927,
+          "variance_pct": -0.02323913158069631,
+          "favorable": true,
+          "material": false
+        },
+        {
+          "line_item": "Operating Income",
+          "is_subtotal": true,
+          "actual": 108859.17000000004,
+          "comparison": 93877.69,
+          "variance": 14981.48000000004,
+          "variance_pct": 0.15958509417945882,
+          "favorable": true,
+          "material": true
+        }
+      ],
+      "top_favorable": [
+        {
+          "line_item": "COGS",
+          "contribution": 64229.81,
+          "contribution_label": "$64K"
+        },
+        {
+          "line_item": "Professional Services",
+          "contribution": 1185.6599999999999,
+          "contribution_label": "$1K"
+        }
+      ],
+      "top_unfavorable": [
+        {
+          "line_item": "Revenue",
+          "contribution": -38117.439999999944,
+          "contribution_label": "-$38K"
+        },
+        {
+          "line_item": "Marketing",
+          "contribution": -11585.030000000006,
+          "contribution_label": "-$12K"
+        }
+      ]
+    }
+  }
+}

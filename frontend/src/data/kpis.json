@@ -1,0 +1,234 @@
+{
+  "cards": [
+    {
+      "key": "revenue",
+      "label": "Revenue",
+      "value": 775349.93,
+      "target": 858618.36,
+      "target_kind": "budget",
+      "direction": "higher_is_better",
+      "fmt": "currency",
+      "rag": "Red",
+      "prior": 715952.86,
+      "trend": {
+        "delta": 59397.070000000065,
+        "pct_change": 0.0829622637445712,
+        "favorable": true
+      }
+    },
+    {
+      "key": "budget_attainment_pct",
+      "label": "Revenue Budget Attainment",
+      "value": 0.9030204408859834,
+      "target": 1.0,
+      "target_kind": "kpi_target",
+      "direction": "higher_is_better",
+      "fmt": "pct",
+      "rag": "Red",
+      "prior": 0.9232803219901953,
+      "trend": {
+        "delta": -0.02025988110421184,
+        "pct_change": -0.021943369333963764,
+        "favorable": false
+      }
+    },
+    {
+      "key": "gross_margin_pct",
+      "label": "Gross Margin %",
+      "value": 0.420927180582837,
+      "target": 0.4,
+      "target_kind": "kpi_target",
+      "direction": "higher_is_better",
+      "fmt": "pct",
+      "rag": "Green",
+      "prior": 0.41266475281626785,
+      "trend": {
+        "delta": 0.008262427766569158,
+        "pct_change": 0.020022131064457223,
+        "favorable": true
+      }
+    },
+    {
+      "key": "operating_income",
+      "label": "Operating Income",
+      "value": 108859.17000000004,
+      "target": 167380.43,
+      "target_kind": "budget",
+      "direction": "higher_is_better",
+      "fmt": "currency",
+      "rag": "Red",
+      "prior": 81403.25,
+      "trend": {
+        "delta": 27455.920000000042,
+        "pct_change": 0.33728284804353686,
+        "favorable": true
+      }
+    },
+    {
+      "key": "operating_margin_pct",
+      "label": "Operating Margin %",
+      "value": 0.1404000513677741,
+      "target": 0.12,
+      "target_kind": "kpi_target",
+      "direction": "higher_is_better",
+      "fmt": "pct",
+      "rag": "Green",
+      "prior": 0.11369917566919141,
+      "trend": {
+        "delta": 0.026700875698582677,
+        "pct_change": 0.23483790046349212,
+        "favorable": true
+      }
+    },
+    {
+      "key": "forecast_accuracy_pct",
+      "label": "Forecast Accuracy %",
+      "value": 0.9508384040222975,
+      "target": 0.93,
+      "target_kind": "kpi_target",
+      "direction": "higher_is_better",
+      "fmt": "pct",
+      "rag": "Green",
+      "prior": 0.9738605555678624,
+      "trend": {
+        "delta": -0.023022151545564973,
+        "pct_change": -0.023640090374274017,
+        "favorable": false
+      }
+    }
+  ],
+  "series": [
+    {
+      "month": "2025-01",
+      "month_label": "January 2025",
+      "revenue_actual": 428348.97,
+      "revenue_budget": 447200.0,
+      "revenue_forecast": 447200.0,
+      "gross_margin_pct": 0.4196038104165396,
+      "operating_margin_pct": 0.016270075307990094,
+      "revenue_per_unit": 42.49915368588153,
+      "total_cost_per_unit": 41.80768925488639
+    },
+    {
+      "month": "2025-02",
+      "month_label": "February 2025",
+      "revenue_actual": 411967.56,
+      "revenue_budget": 446420.0,
+      "revenue_forecast": 446420.0,
+      "gross_margin_pct": 0.4132365422170619,
+      "operating_margin_pct": -0.010684166491167409,
+      "revenue_per_unit": 42.501553698545344,
+      "total_cost_per_unit": 42.95564737439389
+    },
+    {
+      "month": "2025-03",
+      "month_label": "March 2025",
+      "revenue_actual": 468320.77,
+      "revenue_budget": 477406.8,
+      "revenue_forecast": 477406.8,
+      "gross_margin_pct": 0.41719494952145725,
+      "operating_margin_pct": 0.03738779298641828,
+      "revenue_per_unit": 42.501204283510305,
+      "total_cost_per_unit": 40.91217805608495
+    },
+    {
+      "month": "2025-04",
+      "month_label": "April 2025",
+      "revenue_actual": 499303.54,
+      "revenue_budget": 508968.69,
+      "revenue_forecast": 485807.73,
+      "gross_margin_pct": 0.4251557479444267,
+      "operating_margin_pct": 0.062193690835839,
+      "revenue_per_unit": 42.50115253660197,
+      "total_cost_per_unit": 39.85784899557372
+    },
+    {
+      "month": "2025-05",
+      "month_label": "May 2025",
+      "revenue_actual": 501495.98,
+      "revenue_budget": 535702.94,
+      "revenue_forecast": 511325.42,
+      "gross_margin_pct": 0.41778749652190633,
+      "operating_margin_pct": 0.05555302756365065,
+      "revenue_per_unit": 42.4996593220339,
+      "total_cost_per_unit": 40.138674576271185
+    },
+    {
+      "month": "2025-06",
+      "month_label": "June 2025",
+      "revenue_actual": 525322.94,
+      "revenue_budget": 557455.73,
+      "revenue_forecast": 532088.33,
+      "gross_margin_pct": 0.2449121487060892,
+      "operating_margin_pct": -0.09998287910290006,
+      "revenue_per_unit": 42.49841760375374,
+      "total_cost_per_unit": 46.74753175309441
+    },
+    {
+      "month": "2025-07",
+      "month_label": "July 2025",
+      "revenue_actual": 518435.19,
+      "revenue_budget": 551990.48,
+      "revenue_forecast": 526296.42,
+      "gross_margin_pct": 0.1639747101272196,
+      "operating_margin_pct": -0.19190443071582386,
+      "revenue_per_unit": 42.501655189375306,
+      "total_cost_per_unit": 50.657911132972615
+    },
+    {
+      "month": "2025-08",
+      "month_label": "August 2025",
+      "revenue_actual": 534268.25,
+      "revenue_budget": 574235.69,
+      "revenue_forecast": 547506.16,
+      "gross_margin_pct": 0.42029955925698376,
+      "operating_margin_pct": 0.07612672098706974,
+      "revenue_per_unit": 42.50005966112481,
+      "total_cost_per_unit": 39.26466947736854
+    },
+    {
+      "month": "2025-09",
+      "month_label": "September 2025",
+      "revenue_actual": 567167.15,
+      "revenue_budget": 602501.47,
+      "revenue_forecast": 574456.23,
+      "gross_margin_pct": 0.42110917390049835,
+      "operating_margin_pct": 0.08281056122520498,
+      "revenue_per_unit": 42.50034844511053,
+      "total_cost_per_unit": 38.98087073810416
+    },
+    {
+      "month": "2025-10",
+      "month_label": "October 2025",
+      "revenue_actual": 595915.82,
+      "revenue_budget": 648336.63,
+      "revenue_forecast": 614243.44,
+      "gross_margin_pct": 0.4240855696698905,
+      "operating_margin_pct": 0.09399881345657164,
+      "revenue_per_unit": 42.498632149479384,
+      "total_cost_per_unit": 38.50381115390102
+    },
+    {
+      "month": "2025-11",
+      "month_label": "November 2025",
+      "revenue_actual": 715952.86,
+      "revenue_budget": 775444.73,
+      "revenue_forecast": 734667.47,
+      "gross_margin_pct": 0.41266475281626785,
+      "operating_margin_pct": 0.11369917566919141,
+      "revenue_per_unit": 42.49987296687641,
+      "total_cost_per_unit": 37.66767244449721
+    },
+    {
+      "month": "2025-12",
+      "month_label": "December 2025",
+      "revenue_actual": 775349.93,
+      "revenue_budget": 858618.36,
+      "revenue_forecast": 813467.37,
+      "gross_margin_pct": 0.420927180582837,
+      "operating_margin_pct": 0.1404000513677741,
+      "revenue_per_unit": 42.49889991229994,
+      "total_cost_per_unit": 36.532052181539136
+    }
+  ]
+}
